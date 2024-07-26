@@ -1,12 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const menuItems = [
-  { name: "Vanilla", price: "$3.50", description: "Classic creamy vanilla" },
-  { name: "Chocolate", price: "$3.50", description: "Rich dark chocolate" },
-  { name: "Strawberry", price: "$3.75", description: "Fresh strawberry delight" },
-  { name: "Pistachio", price: "$4.00", description: "Nutty pistachio flavor" },
-  { name: "Lemon Sorbet", price: "$3.50", description: "Refreshing lemon sorbet" },
-  { name: "Stracciatella", price: "$4.00", description: "Creamy vanilla with chocolate chips" },
+  { name: "Raspberry", price: "$3.75", description: "Tangy and sweet raspberry delight" },
+  { name: "Mint", price: "$3.50", description: "Cool and refreshing mint flavor" },
+  { name: "Caramel", price: "$3.75", description: "Rich and creamy caramel indulgence" },
+  { name: "Hazelnut", price: "$4.00", description: "Nutty and aromatic hazelnut gelato" },
+  { name: "Walnut", price: "$4.00", description: "Crunchy walnut pieces in creamy gelato" },
+  { name: "Mango Sorbet", price: "$3.50", description: "Tropical and refreshing mango sorbet" },
 ];
 
 const Menu = () => {
