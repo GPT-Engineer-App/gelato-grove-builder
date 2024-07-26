@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -5,6 +6,27 @@ import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail } from "lucide-react";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevData => ({
+      ...prevData,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    // Here you would typically send the data to a server
+    alert("Message sent! (Check console for details)");
+    setFormData({ name: "", email: "", message: "" });
+  };
   return (
     <div className="container mx-auto py-8 bg-green-50 min-h-screen">
       <h1 className="text-3xl font-bold text-center mb-8 text-green-800">Contact Us</h1>
@@ -14,10 +36,26 @@ const Contact = () => {
             <CardTitle className="text-green-800">Send us a message</CardTitle>
           </CardHeader>
           <CardContent className="bg-white">
-            <form className="space-y-4">
-              <Input placeholder="Your Name" />
-              <Input type="email" placeholder="Your Email" />
-              <Textarea placeholder="Your Message" />
+            <form className="space-y-4" onSubmit={handleSubmit}>
+              <Input 
+                name="name"
+                placeholder="Your Name" 
+                value={formData.name}
+                onChange={handleInputChange}
+              />
+              <Input 
+                name="email"
+                type="email" 
+                placeholder="Your Email" 
+                value={formData.email}
+                onChange={handleInputChange}
+              />
+              <Textarea 
+                name="message"
+                placeholder="Your Message" 
+                value={formData.message}
+                onChange={handleInputChange}
+              />
               <Button type="submit" className="bg-green-600 hover:bg-green-700">Send Message</Button>
             </form>
           </CardContent>
