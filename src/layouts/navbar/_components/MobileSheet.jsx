@@ -11,7 +11,7 @@ export const MobileSheet = ({ navItems }) => (
         <span className="sr-only">Toggle navigation menu</span>
       </Button>
     </SheetTrigger>
-    <SheetContent side="left">
+    <SheetContent side="left" className="bg-green-50">
       <nav className="grid gap-6 text-lg font-medium">
         <NavItem
           to="/"

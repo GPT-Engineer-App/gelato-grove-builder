@@ -2,7 +2,7 @@ import { Package2 } from "lucide-react";
 import { NavItem } from "./NavItem";
 
 export const DesktopNavbar = ({ navItems }) => (
-  <nav className="hidden md:flex md:items-center md:gap-5 lg:gap-6 text-lg font-medium md:text-sm">
+  <nav className="hidden md:flex md:items-center md:gap-5 lg:gap-6 text-lg font-medium md:text-sm bg-green-100 px-4 py-2 rounded-full">
     <NavItem
       to="/"
       className="flex items-center gap-2 text-lg font-semibold md:text-base"
