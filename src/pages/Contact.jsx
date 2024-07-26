@@ -28,20 +28,21 @@ const Contact = () => {
     setFormData({ name: "", email: "", message: "" });
   };
   return (
-    <div className="container mx-auto py-8 bg-green-50 min-h-screen">
-      <h1 className="text-3xl font-bold text-center mb-8 text-green-800">Contact Us</h1>
+    <div className="container mx-auto py-8 bg-amber-50 min-h-screen">
+      <h1 className="text-4xl font-bold text-center mb-8 text-amber-800 font-serif tracking-wider">Contact Us</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <Card className="border-green-200 mt-4">
-          <CardHeader className="bg-green-100">
-            <CardTitle className="text-green-800">Send us a message</CardTitle>
+        <Card className="border-amber-300 border-4 overflow-hidden mt-4">
+          <CardHeader className="bg-amber-200">
+            <CardTitle className="text-amber-800 font-serif">Send us a message</CardTitle>
           </CardHeader>
-          <CardContent className="bg-white mt-4">
+          <CardContent className="bg-white bg-opacity-70 mt-4">
             <form className="space-y-4" onSubmit={handleSubmit}>
               <Input 
                 name="name"
                 placeholder="Your Name" 
                 value={formData.name}
                 onChange={handleInputChange}
+                className="border-amber-300 focus:border-amber-500 focus:ring-amber-500"
               />
               <Input 
                 name="email"
@@ -49,33 +50,35 @@ const Contact = () => {
                 placeholder="Your Email" 
                 value={formData.email}
                 onChange={handleInputChange}
+                className="border-amber-300 focus:border-amber-500 focus:ring-amber-500"
               />
               <Textarea 
                 name="message"
                 placeholder="Your Message" 
                 value={formData.message}
                 onChange={handleInputChange}
+                className="border-amber-300 focus:border-amber-500 focus:ring-amber-500"
               />
-              <Button type="submit" className="bg-green-600 hover:bg-green-700">Send Message</Button>
+              <Button type="submit" className="bg-amber-600 hover:bg-amber-700 text-white">Send Message</Button>
             </form>
           </CardContent>
         </Card>
-        <Card className="border-green-200">
-          <CardHeader className="bg-green-100">
-            <CardTitle className="text-green-800">Our Information</CardTitle>
+        <Card className="border-amber-300 border-4 overflow-hidden">
+          <CardHeader className="bg-amber-200">
+            <CardTitle className="text-amber-800 font-serif">Our Information</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4 bg-white">
+          <CardContent className="space-y-4 bg-white bg-opacity-70 mt-4">
             <div className="flex items-center">
-              <MapPin className="mr-2" />
-              <p>123 Gelato Street, Ice Cream City, 12345</p>
+              <MapPin className="mr-2 text-amber-700" />
+              <p className="text-amber-800">123 Gelato Street, Ice Cream City, 12345</p>
             </div>
             <div className="flex items-center">
-              <Phone className="mr-2" />
-              <p>(123) 456-7890</p>
+              <Phone className="mr-2 text-amber-700" />
+              <p className="text-amber-800">(123) 456-7890</p>
             </div>
             <div className="flex items-center">
-              <Mail className="mr-2" />
-              <p>info@gelatoparadise.com</p>
+              <Mail className="mr-2 text-amber-700" />
+              <p className="text-amber-800">info@gelatoparadise.com</p>
             </div>
           </CardContent>
         </Card>
