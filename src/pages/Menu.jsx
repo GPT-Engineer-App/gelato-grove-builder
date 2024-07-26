@@ -11,17 +11,17 @@ const menuItems = [
 
 const Menu = () => {
   return (
-    <div className="container mx-auto py-8 bg-purple-50 min-h-screen">
-      <h1 className="text-3xl font-bold text-center mb-8 text-purple-800">Our Gelato Menu</h1>
+    <div className="container mx-auto py-8 bg-green-50 min-h-screen">
+      <h1 className="text-3xl font-bold text-center mb-8 text-green-800">Our Gelato Menu</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {menuItems.map((item, index) => (
-          <Card key={index} className="border-purple-200">
-            <CardHeader className="bg-purple-100">
-              <CardTitle className="text-purple-800">{item.name}</CardTitle>
+          <Card key={index} className="border-green-200">
+            <CardHeader className="bg-green-100">
+              <CardTitle className="text-green-800">{item.name}</CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-lg font-semibold text-purple-600">{item.price}</p>
-              <p className="text-purple-700">{item.description}</p>
+              <p className="text-lg font-semibold text-green-600">{item.price}</p>
+              <p className="text-green-700">{item.description}</p>
             </CardContent>
           </Card>
         ))}
