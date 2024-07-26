@@ -31,7 +31,7 @@ const Contact = () => {
     <div className="container mx-auto py-8 bg-green-50 min-h-screen">
       <h1 className="text-3xl font-bold text-center mb-8 text-green-800">Contact Us</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <Card className="border-green-200">
+        <Card className="border-green-200 mt-4">
           <CardHeader className="bg-green-100">
             <CardTitle className="text-green-800">Send us a message</CardTitle>
           </CardHeader>
