@@ -35,7 +35,7 @@ const Contact = () => {
           <CardHeader className="bg-green-100">
             <CardTitle className="text-green-800">Send us a message</CardTitle>
           </CardHeader>
-          <CardContent className="bg-white">
+          <CardContent className="bg-white mt-4">
             <form className="space-y-4" onSubmit={handleSubmit}>
               <Input 
                 name="name"
